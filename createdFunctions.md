@@ -11,6 +11,8 @@ function printMoneyTree(rows) {
 }
 ```
 ```
+//return an array of numbers where each number is the length of the corresponding string
+
 var lengths = function(arr) {
   var result = [];
   for (var i = 0; i < arr.length; i++) {
@@ -19,14 +21,19 @@ var lengths = function(arr) {
   return result;
 };
 ```
+
 ```
+//product of the first two numbers, raised to the power of the third number
 var transmogrifier = function(num1, num2, num3) {
   return Math.pow(num1 * num2, num3);
 };
 console.log(transmogrifier());
 //if pass 5,3,2,output 225
 ```
+
 ```
+//a string with the order of the words reversed
+
 function wordReverse(string) {
   var result = string.split(" ");
   return result.reverse().join(" ");
@@ -34,6 +41,8 @@ function wordReverse(string) {
 wordReverse('we are good friends'), output'friend good are we'
 ```
 ```
+// find the longest word during the array
+
 function findLongestWord(arr) {
   var longestWord = "";
   for (var i = 0; i < arr.length; i++) {
@@ -45,6 +54,38 @@ function findLongestWord(arr) {
 }
 ```
 
+```
+// how to find total vowels number in a word
+var countVowels = function(word) {
+  var vowels = ["a", "e", "i", "o", "u", "y"];
+  var count = 0;
+  for (let i = 0; i < word.length; i++) {
+    if (vowels.indexOf(word[i]) !== -1) {
+      count = count + 1;
+    }
+  }
+  return count;
+};
+
+var result = countVowels("stealing");
+console.log(result);
+// displays 3
+
+
+//another way
+
+var word = "stealing";
+var vowels = ["a", "e", "i", "o", "u", "y"];
+var count = 0;
+for (var i = 0; i < word.length; i++) {
+  for (var j = 0; j < vowels.length; JSON++) {
+    if (vowels[j] === word[i]) {
+      console.log("its a vowel");
+      count++;
+    }
+  }
+}
+```
 
 ## loop
 
@@ -57,8 +98,8 @@ for (var i = 0; i <= 10; i++) {
 }
 ```
 
-// multitable 0-10 all print out
 ```
+// multitable 0-10 all print out
 for (var i = 0; i <= 10; i++) {
   console.log([i] + " times table");
   console.log("=======");
@@ -69,8 +110,8 @@ for (var i = 0; i <= 10; i++) {
 }
 ```
 
-// guess number
 ```
+// guess number
 const randomNumber = Math.floor(Math.random() * 11);
 while (true) {
   const userInput = prompt("please guess a number between 0 and 10");
@@ -81,9 +122,9 @@ while (true) {
   }
 }
 ```
-
-// guess number
 ```
+// guess number
+
 const number = Math.floor(Math.random() * 10001);
 
 while (true) {
@@ -100,18 +141,17 @@ while (true) {
 }
 
 ```
-
-//find the multiple number of 7
 ```
+//find the multiple number of 7
+
 for (let i = 1; i <= 200; i++) {
   if (i % 7 == 0) {
     console.log(i);
   }
 }
-```
 
-```
 //print out all num multiple of 7 between 1-200
+```
 
 ```
 //find the leap year of the last 10 years
@@ -152,23 +192,6 @@ var favoriteMovie = {
 favoriteMovie.printDetails();
 ```
 
-// find random item from two array and join together
-```
-var thisArray = [
-  "Skynet",
-  "Digital Music Distribution",
-  "FitBit"
-];
-var thatArray = [
-  "Facebook Platform",
-  "Erlang Enthusiasts",
-  "Ex-Girlfriends",
-  "Baristas"
-];
-var randomItem1 = thisArray[Math.floor(Math.random() * thisArray.length)];
-var randomItem2 = thatArray[Math.floor(Math.random() * thatArray.length)];
-console.log(randomItem1 + " " + randomItem2);
-```
 
 ```
 // find the greater number
@@ -268,38 +291,6 @@ newDate[0].sort();
 console.log(newDate);
 ```
 
-```
-// how to find total vowels number in a word
-var countVowels = function(word) {
-  var vowels = ["a", "e", "i", "o", "u", "y"];
-  var count = 0;
-  for (let i = 0; i < word.length; i++) {
-    if (vowels.indexOf(word[i]) !== -1) {
-      count = count + 1;
-    }
-  }
-  return count;
-};
-
-var result = countVowels("stealing");
-console.log(result);
-// displays 3
-
-
-//another way
-
-var word = "stealing";
-var vowels = ["a", "e", "i", "o", "u", "y"];
-var count = 0;
-for (var i = 0; i < word.length; i++) {
-  for (var j = 0; j < vowels.length; JSON++) {
-    if (vowels[j] === word[i]) {
-      console.log("its a vowel");
-      count++;
-    }
-  }
-}
-```
 
 ## function activity
 
