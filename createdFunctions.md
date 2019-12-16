@@ -271,7 +271,7 @@ function helloWorld(code) {
   };
   return table[code];
 }
-console.log(helloWorld.table[en]);
+console.log(helloWorld('en'));
 
 ```
 
