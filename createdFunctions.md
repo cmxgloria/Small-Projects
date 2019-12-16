@@ -173,6 +173,46 @@ for (let i = 101; i <= 200; i = i + 3) {
 //101 107 113..197
 ```
 
+```
+var drinkAge = 18;
+var userIput = prompt("Please put your age");
+var age = parseInt(userIput);
+if (age >= drinkAge) {
+  console.log("Welcome to the relaxing world!!");
+} else {
+  console.log("Please go home to watch TV.");
+}
+
+
+
+function checkAC() {
+  var currentTem = Number(prompt("What is current temperature?"));
+  var AC = prompt("is the AC working?");
+  var desiredTemp = Number(prompt("what temperature would you prefer?"));
+  if (AC === "yes" && currentTem > desiredTemp) {
+    return "Turn on A/C";
+  } else if (AC !== "yes" && currentTem > desiredTemp) {
+    return 'Fix the AC, it is hot'
+  }else if(AC !== "yes" && currentTem < desiredTemp){
+return "Fix the A/C whenever you have the chance... It's cool..."
+  }else{
+    return 'no problem'
+  }
+}
+
+var suburb;
+do{
+suburb = prompt('What suburb do you live?');
+if(suburb.trim()!== ''){
+  console.log(suburb.trim() + 'is a nice place.');
+}
+  else{
+    alert('You did not say anything');
+  }
+}
+while
+  (suburb.trim() === '')
+ ```
 
 ## function inside the object
 ```
