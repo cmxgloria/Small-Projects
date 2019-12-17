@@ -1,5 +1,45 @@
 ## function
 ```
+// calculate each array and 3 arrays in total- extension.Having placed a $1 bet on each stroke over par that Bob and Jimbo played per hole calculate his winnings.
+var totalScores = function(arr) {
+  var total = 0;
+  for (var i = 0; i < arr.length; i++) {
+    total = total + arr[i];
+  }
+  return total;
+};
+
+var getWinings = function(player, par) {
+  var win = 0;
+  for (var i = 0; i < par.length; i++) {
+    var diff = player[i] - par[i];
+    win = win + (diff > 0 ? diff : 0);
+  }
+  return win;
+};
+
+// usage
+var bob = [3, 2, 6, 11, 9, 2, 6, 9, 10];
+var jimbo = [5, 12, 9, 22, 13, 7, 16, 10, 11];
+var fish = [2, 2, 4, 5, 4, 3, 6, 4, 1];
+var bobTotal = totalScores(bob);
+var jimboTotal = totalScores(jimbo);
+var fishTotal = totalScores(fish);
+var total = bobTotal + jimboTotal + fishTotal;
+console.log(`bob total:  ${bobTotal}`);
+console.log(`jimbo total: ${jimboTotal}`);
+console.log(`fish total:  ${fishTotal}`);
+console.log(`total:  ${total}`);
+
+// bet winngings
+var par = [3, 4, 5, 5, 3, 3, 4, 3, 5];
+var winningsForBob = getWinings(bob, par);
+var winningsForJimbo = getWinings(jimbo, par);
+var totalWinings = winningsForBob + winningsForJimbo;
+console.log(`winnings: ${totalWinings}`);
+```
+
+```
 //money tree
 function printMoneyTree(rows) {
   for (var i = 1; i <= rows; i++) {
