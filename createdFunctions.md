@@ -1,8 +1,10 @@
 ## small projects
-//combine html css javascript
+### combine html css javascript
 
 ```
 // create toilet project using addEventListener to click the button to do sth
+//file:///Users/gloriachen/sei/code-alongs/02-web/toilet.js/index.html
+
 //html
 <!DOCTYPE html>
 <html lang="en">
@@ -79,6 +81,7 @@ flush1.addEventListener("click", flush);
 
 ```
 //crappy calculation to calculate 2 numbers and submit to get value
+file:///Users/gloriachen/sei/code-alongs/02-web/crappy-calculator/index.html
 
 //html
 <!DOCTYPE html>
