@@ -1,3 +1,209 @@
+## 18/12
+```
+//fashion-css project
+file:///Users/gloriachen/sei/code-alongs/02-web/fashion_css/index.html
+
+//html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h2><span class="title">Sartre's List</span> Better-Dressed People</h2>
+      <nav>
+        <ul class="headnav">
+          <li><a href="">Women's</a></li>
+          <li><a href="">Men's</a></li>
+          <li><a href="">On the Street</a></li>
+          <li><a href="">The Catwalk</a></li>
+          <li><a href="">AdWatch</a></li>
+          <li><a href="">About</a></li>
+        </ul>
+        <!-- can only use a tag 
+        ul>li*6 {item}-->
+      </nav>
+    </header>
+    <div class="container">
+      <main>
+        <article>
+          <p>11/12/13</p>
+          <p>On the street in Brooklyn</p>
+          <img src="images/fashion_photo.jpeg" alt="" />
+          <p>
+            <span class="firstletter">C</span>ray culpa stuptown,flexitarian ex
+            odd Future do fugiat Wes Anderson proident 3 wolf moon officia
+            bitter small batch.
+            <a href="" class="link">Continues...</a>
+          </p>
+        </article>
+        <article>
+          <p>11/11/13</p>
+          <img src="images/fashion_photo2.jpeg" alt="" />
+          <p>
+            <span class="firstletter">S</span>elfies sunt Tumblr, delectus small
+            batch DIY umanmi sint.Polaroid chambray selfies McSeeney's Cosby
+            sweater.
+            <a href="" class="link">Continues...</a>
+          </p>
+        </article>
+      </main>
+      <aside>
+        <section>
+          <h3>About Us</h3>
+          <p>
+            Sartre's List is u salvia, fixie mumblecore ex aesthetic qui minim
+            blog cliche.retro disrupt keytar PBR, delectus consetetur
+            flexitarian fingerstache selfies nostrud Schitz.<a
+              href=""
+              class="link"
+              >More...</a
+            >
+          </p>
+        </section>
+        <section class="ad"><span class="adword">Ad</span></section>
+        <section>
+          <h3>Popular Posts</h3>
+          <ul class="post">
+            <li>10 Things Not to Wear on the Red Carpet</li>
+            <li>Valhalla at The Met Gala</li>
+            <li>Jeans: To Fray or Not to Fray</li>
+            <li>"Trashion" is in This Season</li>
+            <li>Back to School in Pencil Skirts</li>
+            <li>Fall Season Preview</li>
+            <li>Even more Ways to Wrap a Sari!</li>
+            <li>Is Steam Punk Here to Stay?</li>
+            <li>Neighborhoodie Watch</li>
+            <li>Hair Styles of the Damned</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+    <footer>
+      <nav>
+        <ul class="tailnav">
+          <li><a href="">Home</a></li>
+          <li><a href="">Women's</a></li>
+          <li><a href="">Men's</a></li>
+          <li><a href="">On the Street</a></li>
+          <li><a href="">The Catwalk</a></li>
+          <li><a href="">AdWatch</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Tips</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">@copy; 2013 Valet Industries, Inc</p>
+    </footer>
+  </body>
+</html>
+
+
+//css
+body {
+  color: grey;
+}
+h2 {
+  font-weight: 300;
+}
+.title {
+  color: rgb(216, 46, 46);
+  font-size: 40px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+.headnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+  text-align: center;
+}
+.headnav li {
+  flex: 1;
+  /* flex-grow: 1; * same result*/
+  background-color: black;
+  /* margin-right: 2px; */
+  line-height: 60px;
+  font-size: 17px;
+  border-right: 1px solid #bbb;
+}
+.headnav li a {
+  color: #bbb;
+  text-decoration: none;
+}
+li:last-child {
+  border-right: none;
+}
+.tailnav {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  padding: 2px;
+  list-style-type: none;
+  text-align: center;
+}
+.tailnav li {
+  justify-content: flex-start;
+  /* flex: 1; */
+  background-color: white;
+  line-height: 40px;
+  /*font-size: 17px; */
+  border-left: 1px solid #bbb;
+  margin-right: 10px;
+}
+.tailnav li a {
+  color: rgb(240, 96, 96);
+  text-decoration: none;
+  margin-right: 2px;
+}
+.tailnav ul li first-child {
+  border-left: none;
+}
+.firstletter {
+  font-size: 60px;
+  color: rgb(163, 154, 154);
+}
+/* p::first-letter{color: red; float:left;font-size:80px;} */
+.link {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+article {
+  border-bottom: 1px solid grey;
+}
+aside {
+  /* flex-direction: column; */
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.ad {
+  background-color: rgb(197, 184, 184);
+}
+.adword {
+  font-size: 200px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+.post {
+  color: rgb(241, 78, 78);
+}
+.copyright {
+  font-size: 20px;
+}
+
+```
 ## 17/12
 ```
 //html
