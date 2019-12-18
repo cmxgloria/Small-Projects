@@ -1,4 +1,33 @@
 ## function
+
+```
+https://files.slack.com/files-pri/T0351JZQ0-FRG8MSSE7/mornings_warmup
+
+var yearSelect = function() {
+  var maxyear = 1950;
+  var minYear = 1930;
+  var setYear = Math.floor(Math.random()) * (maxyear - minYear) + minYear;
+  return setYear;
+};
+var guessTalk = function(talk) {
+  var refTalk = talk.toUpperCase();
+  return refTalk === talk ? true : false;
+};
+var grandmaRes = function() {
+  var grandmaTalk = "";
+  var sonnyTalk = "Good morning";
+  while (sonnyTalk !== "BYE") {
+    grandmaTalk = guessTalk(sonnyTalk)
+      ? `No, NOT SINCE ${yearSelect}`
+      : "HUH?!  SPEAK UP, SONNY!";
+    console.log(grandmaTalk);
+    if (sonnyTalk == "BYE") {
+      console("Bye, sonny");
+    }
+  }
+};
+grandmaRes();
+```
 ```
 // calculate each array and 3 arrays in total- extension.Having placed a $1 bet on each stroke over par that Bob and Jimbo played per hole calculate his winnings.
 var totalScores = function(arr) {
