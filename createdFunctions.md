@@ -1,3 +1,120 @@
+## small projects
+//combine html css javascript
+
+```
+// create toilet project using addEventListener to click the button to do sth
+//html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="tank">
+      <div style="background-color:lightgray;" , class="flush-btn"></div>
+    </div>
+    <div class="bowl"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+//css
+
+* {
+  box-sizing: border-box;
+}
+/* "*" to apply all element */
+
+body {
+  background-color: grey;
+}
+.tank {
+  background-color: white;
+  width: 400px;
+  height: 200px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bowl {
+  transition: all linear 400ms;
+  background-color: rgb(71, 131, 71);
+  width: 400px;
+  height: 400px;
+  border-radius: 20% 20% 40% 40%;
+  /* topleft topright bottomright bottomleft */
+  border: 60px solid white;
+  padding: 20px;
+  box-shadow: inset 0 0 20px grey;
+}
+.flush-btn {
+  width: 200px;
+  height: 100px;
+  box-shadow: 0 4px 8px 0 grey;
+  cursor: pointer;
+  text-align: center;
+}
+
+//app.js
+var bowl = document.querySelector(".bowl");
+var flush1 = document.querySelector(".flush-btn");
+var poop = function() {
+  window.document.body.children[1].style.backgroundColor = "darkolivegree";
+};
+
+var flush = function() {
+  window.document.body.children[1].style.backgroundColor = "mintcream";
+};
+// window.document.body.children[1].addEventListener("click", poop);
+// window.document.body.children[0].children[0].addEventListener("click", flush);
+bowl.addEventListener("click", poop);
+flush1.addEventListener("click", flush);
+
+```
+
+```
+//crappy calculation to calculate 2 numbers and submit to get value
+
+//html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>crappy calculator</h1>
+    <input class="number1" type="number" value="number" /> +
+    <input class="number2" type="number" value="number" />
+    <span>?</span>
+    <button class="submit-btn">submit</button>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+//css
+var num1 = document.querySelector(".number1");
+var num2 = document.querySelector(".number2");
+var span = document.querySelector("span");
+var submitBtn = document.querySelector(".submit-btn");
+//Event handler
+var handleClick = function() {
+  var sum = Number(num1.value) + Number(num2.value);
+  //input when print is a string ,need to convert using Number
+  span.textContent = sum;
+};
+
+submitBtn.addEventListener("click", handleClick);
+
+```
+
 ## function
 
 ```
