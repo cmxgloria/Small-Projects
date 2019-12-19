@@ -1,4 +1,24 @@
 ## small projects
+```
+//find wolf to warn sheep project
+
+var sheep = ["sheep", "sheep", "sheep", "sheep", "sheep", "sheep", "sheep"];
+var wolfPos = Math.floor(Math.random() * (sheep.length + 1));
+function warn() {
+  sheep.splice(wolfPos, 0, "Wolf");
+  console.log(sheep);
+  var warnSheep = sheep.length - (sheep.indexOf("Wolf") + 1);
+  if (warnSheep !== 0) {
+    console.log(
+      `Oi! Sheep number ${warnSheep}! You are about to be eaten by a wolf!`
+    );
+  } else {
+    console.log("Pls go away and stop eating my sheep");
+  }
+}
+warn();
+```
+
 ### combine html css javascript
 
 ```
