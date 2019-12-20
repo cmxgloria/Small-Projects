@@ -1,4 +1,102 @@
 ## small projects
+
+```
+//created two buttons to add two numbers together
+//html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body class="dark">
+    <span class="mode-btn">Dark Mode</span>
+    <h1>crappy calculator</h1>
+    <input class="number1" type="number" value="number" /> +
+    <input class="number2" type="number" value="number" /> =
+    <span class="result">?</span>
+    <button class="submit-btn">submit</button>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+//app.js
+var num1 = document.querySelector(".number1");
+var num2 = document.querySelector(".number2");
+var span = document.querySelector("span");
+var submitBtn = document.querySelector(".submit-btn");
+//Event handler
+var handleClick = function(e) {
+  var result = Number(num1.value) + Number(num2.value);
+  //input when print is a string ,need to convert using Number
+  span.textContent = result;
+};
+
+submitBtn.addEventListener("click", handleClick);
+
+var handleToogle = function() {
+  document.body.classList.toogle("dark");
+  if (modeBtn.textContent === "dark mode") {
+    modeBtn.textContent = "light mode";
+  } else {
+  }
+};
+//css
+body {
+  background-color: white;
+}
+.dark {
+  background-color: black;
+  color: white;
+}
+h1 {
+  margin-top: 0;
+}
+.mode-btn {
+  position: fixed;
+}
+
+```
+
+```
+//bank deposit aim to add current deposit and original balance to total balance
+//html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Bank Total Balance</h1>
+
+    $<input id="deposit" type="number" value="number" />
+    <button class="deposit-btn">Deposit</button>
+    <div class="total">Total: <span class="balance">0</span></div>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+//app.js
+var totalBalance = 0;
+var deposit = 0;
+var depositBtn = document.querySelector(".deposit-btn");
+var balanceElement = document.querySelector(".balance");
+var handleClick = function() {
+  deposit = Number(document.querySelector("#deposit").value);
+  var currentBalance = Number(balanceElement.textContent);
+  var newBalance = deposit + currentBalance;
+  balanceElement.textContent = newBalance;
+};
+
+depositBtn.addEventListener("click", handleClick);
+
+```
 ```
 //find wolf to warn sheep project
 
@@ -137,6 +235,72 @@ var handleClick = function() {
 submitBtn.addEventListener("click", handleClick);
 
 ```
+
+timer
+```
+//created a few function to press button to start, pause and reset
+//html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>stop watch</h1>
+    <div class="timer">0</div>
+    <div class="control"></div>
+    <button class="start-btn">start</button>
+    <button class="pause-btn">pause</button>
+    <button class="reset-btn">reset</button>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+//app.js
+
+var timerDiv = document.querySelector(".timer");
+var startBtn = document.querySelector(".start-btn");
+var pauseBtn = document.querySelector(".pause-btn");
+var resetBtn = document.querySelector(".reset-btn");
+var second = 0;
+var timerId = null;
+
+var tick = function() {
+  second++;
+  timerDiv.textContent = second;
+};
+var handleClick = function() {
+  //if press to startBtn, can not press again the start button
+  if (timerId !== null) {
+    return;
+  }
+  timerId = setInterval(tick, 1000);
+};
+// startBtn.addEventListener("click", function() {
+//   setInterval(tick, 1000);
+// });
+
+var handleClickPause = function() {
+  clearInterval(timerId);
+  //to make start button to work again after you pause and start again.
+  timerId = null;
+};
+//?
+var handleClickReset = function() {
+  clearInterval(null);
+  timerId = null;
+};
+
+startBtn.addEventListener("click", handleClick);
+pauseBtn.addEventListener("click", handleClickPause);
+resetBtn.addEventListener("click", handleClickReset);
+
+```
+
 
 ## function
 
