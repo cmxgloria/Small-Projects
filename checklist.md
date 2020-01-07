@@ -86,3 +86,32 @@ allItems.forEach(function(item) {
   });
 });
 ```
+
+```
+//exercise
+```
+document.querySelector('.item').style.backgroundColor = 'lightgrey'
+document.querySelector('.item').style.textDecoration = 'line-through'
+
+var firstItem = document.querySelector('.item')
+undefined
+firstItem
+<li class=​"item">​the software development process​</li>​
+firstItem.textContent
+"the software development process"
+firstItem.classList
+DOMTokenList ["item", value: "item"]
+firstItem.classList.remove('completed')
+undefined
+firstItem.classList.add('hello')
+undefined
+
+document.querySelectorAll('.item')
+NodeList(6) [li.item, li.item, li.item, li.item, li.item.completed, li.item]
+document.querySelectorAll('.item')[4]
+<li class=​"item completed" style=​"text-decoration:​ line-through;​ background-color:​ lightgrey;​">​question life​</li>​
+
+"data-id"(id for specific meaning)
+event.target.dataset
+event.target.getAttribute
+```
